@@ -1,0 +1,18 @@
+doctype html 
+html 
+  head 
+    title=Form
+  body 
+      form(method="POST",action="/new")
+        // Input field
+        label(for="inputField") Message: 
+        input(type="text",id="inputField",name="messageText")
+        // Another one
+        label(for="inputField") User: 
+        input(type="text",id="userField",name="messageUser")
+        //Button
+        button(type="submit") Submit
+
+//- With your form set up like this, when you click on the submit button 
+//-  it should send a POST request to the url specified by the action attribute, 
+//-  so go back to your index router and add a router.post() for "/new".

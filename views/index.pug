@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+    hr
+    each object in messages
+      div
+        strong=object.text 
+        p=object.user
+        span=object.added
+      hr
+  a(href='/new') Add a message
